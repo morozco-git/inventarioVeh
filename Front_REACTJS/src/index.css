@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+	background-image: url("img/post03.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: black;
+	font-weight: 400;
+	font-family: 'Fira Sans', sans-serif;
+	height: 100vh;
+  }
+  
+.centerBlock {
+    display: table;
+	margin: auto;
+}
+
+.noSelect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent; 
+}
+
+.btn-primary {
+	margin-top: 16px;
+	outline: none;
+	background: linear-gradient(
+		90deg,
+		rgb(106, 85, 224) 0%,
+		rgb(46, 105, 172) 100%
+	);
+	height: 45px;
+	border: none;
+	border-radius: 5px;
+	font-weight: 800;
+	transition: 0.2s;
+}
+
+.btn-primary:hover {
+	font-size: large;
+	background: linear-gradient(
+		90deg,
+		rgba(106, 85, 224) 0%,
+		rgb(78, 142, 216) 50%
+	);
+	transition: 0.2s;
+}
+
+.btn-nav{
+	margin-top: 15px;
+	background: #00b7f8;
+	border-bottom: 5px solid #0045a6;
+	border-radius: 12px;
+	box-shadow: 6px 6px 6px #999;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Raleway', Arial, Helvetica;
+	font-size: 15px;
+	height: 32px;
+	margin: 80px auto;
+	padding: 20px 20px;
+	text-align: center;
+	transition: all 0.2s ease 0s;
+	width: 120px;
+}
+
+.btn-nav:hover{
+	background: #0096f7;
+}
+
+.btn-nav:active {
+	box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #00b7f8;
+	border-bottom:1px solid #0045A6;
+	text-shadow:  0px 0px 5px #fff, 0px 0px 5px #fff;
+	transform: translateY(4px);
+	transition: all 0.1s ease 0s;
+	margin: 80px auto 76px auto;
+}
+
+.loginSection {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	min-width: 290px;
+	max-width: 1000px;
+	padding: 40px 20px 40px 20px;
+
+	width:auto;
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+		
+	text-align: center;
+	font-size: medium;
+	font-size-adjust: inherit;
+	font-weight: bold;
+	color: rgb(14, 0, 92);
+	
+	background-image: linear-gradient(to bottom right, rgba(255, 235, 235, 0.925), rgba(255, 255, 254, 0.63));
+	
+	box-sizing: border-box;
+	box-shadow: 0px 14px 80px rgba(61, 65, 143, 0.2);
+	border-radius: 8px;
+	border-width: unset;
+	transition: 0.2s;
+}
+
+.form-control:focus{
+	border-color: #167bff;
+	box-shadow: none;
+	border-width: unset;
+	font-size-adjust: inherit;
+	font-weight: bold;
+	box-sizing: border-box;
+	transition: 0.2s;
+  
+}
+
+.page-wrapper {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	padding: 40px 20px 40px 20px;
+	background-image: linear-gradient(to bottom right, rgba(255, 232, 214, 0.925), rgba(255, 191, 149, 0.829));
+	
+	text-align: center;
+	font-size-adjust: inherit;
+	color: rgb(14, 0, 92);
+	font-weight: bold;
+	
+	box-sizing: border-box;
+	box-shadow: 0px 14px 80px rgba(61, 65, 143, 0.2);
+	border-radius: 8px;
+	transition: all .3s;
+}
+
+h1,h2,h3,h4,h5,h6, span {
+	font-weight: 500;
+	color: navy;
+	font-size: 25px;
+	font-size-adjust: inherit;
+	font-family: 'Fira Sans', sans-serif;
+}
+  
+.py-center{
+	padding-top: 250px;	
+}
+
+.navbar-light{
+  box-shadow: 2px 2px 5px rgb(180, 16, 16);
+  opacity: 0.9;
+}
+
+.navbar {
+  /*background: rgba(51, 0, 117, 0.726);*/
+  background: transparent;
+  }
+
+.nav-item, .nav-link {
+  color: rgb(255, 255, 255) !important;
+  font-weight: bolder;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+	background: -webkit-linear-gradient(
+		0deg,
+		rgb(255, 239, 18) 0%,
+		rgb(238, 255, 0) 50%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.customLabel{
+	text-align: left;
+	font-size: medium;
+	align-content: left;
+	align-items: flex-start;
+	font-weight: 500;
+	color: navy;
+	font-family: 'Fira Sans', sans-serif;	
+}
+
+.custom-control-label{
+  font-weight: 400;
+
+}
+
+.forgot-password,
+.forgot-password a {
+	text-align: right;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #7f7d7d;
+	margin: 0;
+}
+
+.forgot-password a{
+	color: #167bff;
+	transition: 0.2s;
+}
+
+.zoomImg:hover {
+	-webkit-transform:scale(1.9);
+	transform:scale(2);
+	transition:all .5s ease-in-out;
+
+}
+.zoomImg {
+	overflow:hidden;
+	transition:all .5s ease-in-out;
+}
+
+
+@media screen and (max-width: 320px) {
+	.btn-primary{
+		height: 27px;
+		font-size: 12px;
+		font-weight: 200;
+	}
+	.btn-primary:hover {
+		font-size: 12px;
+
+	}
+	.btn-nav,
+	.btn-nav:hover {
+		font-size: smaller;
+		width: 35px;
+	}
+}
