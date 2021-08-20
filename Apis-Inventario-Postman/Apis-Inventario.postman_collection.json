@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "d4efc9a0-85aa-4582-b405-4104e17ad0eb",
+		"name": "Apis-Inventario",
+		"description": "Sistema de control de inventario de automóviles en el cual únicamente\r\nse podrá mostrar y agregar vehículos al sistema. \r\nDos tipos de vehículos (sedan y motocicletas)\r\nDiferenciando número de llantas y potencia de motor.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Vehículo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBiZjllNzE2Y2E5MGRjODIyMDg4NWJmODFmZWYxNzNhNTY2ZTY5ZjI4MDZmMzQ0ZmUyZjc4NWE1NTU4YjFhNzIxYTI0YjhhOTdiODZiZWUiLCJpYXQiOjE2Mjk0MzM1NDQsIm5iZiI6MTYyOTQzMzU0NCwiZXhwIjoxNjI5NTE5OTQ0LCJzdWIiOiI2NCIsInNjb3BlcyI6W119.ZwF5RaxMOfu-YjW8dUTC3XMBZsaN7tF4i5nUF5kUWa9CHYiaJiIFDXiCgryn-pJmgQ83b_1R0fS_7MssOdXKYC65v4k5fJRTfpKcOIKofLw_0xa-KjQ5nkGsEC3Zcd344Dn32Sq9qTQIq_HehmuN2a75yxGYX424FNz-8hFPm8QQwZfQb4JgVbwV_SOgObF3EprihvV-V7kbP6ijRg_HtjxIKDyuqjZjQ5DrwqsD7O_7z4Qil70uv4yhKLezE5wQG13a1ZgB_AtlzD9QBCFv1M10QCSQgpkNETYu2G8Pz8ZM2bR5wxunWrpkEsE8e18PIXT_haRDnUIPVcuUWN0fnbEOChJFDGvTP_EDhIFifPk8dEJu4Zfz48O_Bl24fmxqi1ACAmRcLf59D79Qy7NQOO5xbSMMN1yzDGNEWddXPVA9ywfhLm72Iu094EscrO5LNgGZ-v5b4l2_r0roAZuDMoIIn1bf70GmmFSF3e7EMX-Hkc2hG8C2uxCT7Tlz6Nohtk-zrxpzTwjlxqTt4rPTZL6uCvZg5ufDadpG6ba6hJ9LWfW6uLXydBCevX6nX466lss4WCca8toznnDm3syrdkrqn2UCGsyh5qnfSVwIXLQ3DYgSG9O0LTe95MsL88zE-RYA2jZVgIxuHW27Q88dRkth5RkEXgtk6jgZQOEkaQk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tipo",
+							"value": "Motocicleta",
+							"type": "text"
+						},
+						{
+							"key": "nLlantas",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "pMotor",
+							"value": "350W",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://inventarioveh.000webhostapp.com/Apis/add",
+					"protocol": "https",
+					"host": [
+						"inventarioveh",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"Apis",
+						"add"
+					]
+				},
+				"description": "Use will be able to Add Vehículos.\r\nAuth/Token barer is required.\r\n\r\nExpected: \"message\": \"Vehículo Agregado\""
+			},
+			"response": []
+		},
+		{
+			"name": "Add new users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjBiZjllNzE2Y2E5MGRjODIyMDg4NWJmODFmZWYxNzNhNTY2ZTY5ZjI4MDZmMzQ0ZmUyZjc4NWE1NTU4YjFhNzIxYTI0YjhhOTdiODZiZWUiLCJpYXQiOjE2Mjk0MzM1NDQsIm5iZiI6MTYyOTQzMzU0NCwiZXhwIjoxNjI5NTE5OTQ0LCJzdWIiOiI2NCIsInNjb3BlcyI6W119.ZwF5RaxMOfu-YjW8dUTC3XMBZsaN7tF4i5nUF5kUWa9CHYiaJiIFDXiCgryn-pJmgQ83b_1R0fS_7MssOdXKYC65v4k5fJRTfpKcOIKofLw_0xa-KjQ5nkGsEC3Zcd344Dn32Sq9qTQIq_HehmuN2a75yxGYX424FNz-8hFPm8QQwZfQb4JgVbwV_SOgObF3EprihvV-V7kbP6ijRg_HtjxIKDyuqjZjQ5DrwqsD7O_7z4Qil70uv4yhKLezE5wQG13a1ZgB_AtlzD9QBCFv1M10QCSQgpkNETYu2G8Pz8ZM2bR5wxunWrpkEsE8e18PIXT_haRDnUIPVcuUWN0fnbEOChJFDGvTP_EDhIFifPk8dEJu4Zfz48O_Bl24fmxqi1ACAmRcLf59D79Qy7NQOO5xbSMMN1yzDGNEWddXPVA9ywfhLm72Iu094EscrO5LNgGZ-v5b4l2_r0roAZuDMoIIn1bf70GmmFSF3e7EMX-Hkc2hG8C2uxCT7Tlz6Nohtk-zrxpzTwjlxqTt4rPTZL6uCvZg5ufDadpG6ba6hJ9LWfW6uLXydBCevX6nX466lss4WCca8toznnDm3syrdkrqn2UCGsyh5qnfSVwIXLQ3DYgSG9O0LTe95MsL88zE-RYA2jZVgIxuHW27Q88dRkth5RkEXgtk6jgZQOEkaQk"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Jose",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Perez",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jp@inventario.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "098ccc",
+							"type": "text"
+						},
+						{
+							"key": "password_confirm",
+							"value": "098ccc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://inventarioveh.000webhostapp.com/Apis/register",
+					"protocol": "https",
+					"host": [
+						"inventarioveh",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"Apis",
+						"register"
+					]
+				},
+				"description": "Add new users for web site app.\r\nUser is able to do this action once logged.\r\nAuth/Token barer is required.\r\nEmail must be unique.\r\nConfirmation password is required.\r\n\r\nparams:\r\nfirst_name\r\nlast_name\r\nemail\r\npassword\r\npassword_confirm\r\n\r\nExpected: \"message\": \"Usuario agregado correctamente\""
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL Inventario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWJhMTE0ODFjZjRmMDUzNTk2MjkzNjAzZDE5YjAxNGI5ODBkMWQzOWJmZWYwODExOTVjOTJmOTViYjIzYzM2Y2FkMmM1ZjYzNDZmZDQ2OGQiLCJpYXQiOjE2Mjk0MzM2MDQsIm5iZiI6MTYyOTQzMzYwNCwiZXhwIjoxNjI5NTIwMDAzLCJzdWIiOiI2NCIsInNjb3BlcyI6W119.tPK_28n9JUntRFl7tj7UPATQTSuhiD06J55tDafN38EZo4DegAOjC5Sb1DU4qXRm_30oh2ia3oGZLV4WJpFnzzUu0H3JGb9eYX0peqdX4FMSPu6r3iaFkCP8Hj9irMZT7CBbIPs4cOod0-WbL98rhWY7KeC0Tjo9Bbo2YJW7_We21X73m1QSQk_E0tjsM1zfcLHtGcg2XRBv0bxFrIDuyyR4TQuPfoHeFQrqzIdgjIr2NuobzUWiX-6d722VsbbrmmR_2SP3nyz8F3xLtGyMcnrL5f6MGj_T7vPRgVwwA6wX9FdcFf-EXMsOUboFGxxA_avJ29lhgP0174eqQjwVEIRqjQOHxbuL2RLmhD3XlGgrr6GAepwnr2k9o_1T3Q1JvwoBSTAuPsOwJ939mi0gUkhanz68KVsCEpqgjdxnOAo573YgMqy8DgdmYoFFdToCJLB-JgnuOCHYW-_hGDFxkUXXws_64kN-DIeJ7uGYLRb9BMfqm24v9N_9u9ZqaAvAysoEXckXVSg6M3qHgh5rgabyE9lk69zVYFdr9JmrHy80sfjCONFvVKD8I_dcU6gyRS8ZMp5YzAEVSSMZsIW5w1pYxXiXXyMSU0vO5xPjORFtvT-s4pdhRLGDXLZWSVkcFTu9UYJeRr7xc1icEeuiMPusnYGZVqj1Vcfut4ZE3aQ"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://inventarioveh.000webhostapp.com/Apis/getAllInv",
+					"protocol": "https",
+					"host": [
+						"inventarioveh",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"Apis",
+						"getAllInv"
+					]
+				},
+				"description": "-Get total's records from Inventario group by total stock.\r\n-This API does not require parameters as (data).\r\n-Auth/Token barer is required.\r\n\r\nExpected: \"message\": \"Inventario generado\",\r\n                     \"allInventario\": [+regs]"
+			},
+			"response": []
+		},
+		{
+			"name": "Login request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "eloy@gilasw.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "eloy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://inventarioveh.000webhostapp.com/Apis/login",
+					"protocol": "https",
+					"host": [
+						"inventarioveh",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"Apis",
+						"login"
+					]
+				},
+				"description": "Login User sending email and password parameters.\r\nAuth/Token is not required."
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWJhMTE0ODFjZjRmMDUzNTk2MjkzNjAzZDE5YjAxNGI5ODBkMWQzOWJmZWYwODExOTVjOTJmOTViYjIzYzM2Y2FkMmM1ZjYzNDZmZDQ2OGQiLCJpYXQiOjE2Mjk0MzM2MDQsIm5iZiI6MTYyOTQzMzYwNCwiZXhwIjoxNjI5NTIwMDAzLCJzdWIiOiI2NCIsInNjb3BlcyI6W119.tPK_28n9JUntRFl7tj7UPATQTSuhiD06J55tDafN38EZo4DegAOjC5Sb1DU4qXRm_30oh2ia3oGZLV4WJpFnzzUu0H3JGb9eYX0peqdX4FMSPu6r3iaFkCP8Hj9irMZT7CBbIPs4cOod0-WbL98rhWY7KeC0Tjo9Bbo2YJW7_We21X73m1QSQk_E0tjsM1zfcLHtGcg2XRBv0bxFrIDuyyR4TQuPfoHeFQrqzIdgjIr2NuobzUWiX-6d722VsbbrmmR_2SP3nyz8F3xLtGyMcnrL5f6MGj_T7vPRgVwwA6wX9FdcFf-EXMsOUboFGxxA_avJ29lhgP0174eqQjwVEIRqjQOHxbuL2RLmhD3XlGgrr6GAepwnr2k9o_1T3Q1JvwoBSTAuPsOwJ939mi0gUkhanz68KVsCEpqgjdxnOAo573YgMqy8DgdmYoFFdToCJLB-JgnuOCHYW-_hGDFxkUXXws_64kN-DIeJ7uGYLRb9BMfqm24v9N_9u9ZqaAvAysoEXckXVSg6M3qHgh5rgabyE9lk69zVYFdr9JmrHy80sfjCONFvVKD8I_dcU6gyRS8ZMp5YzAEVSSMZsIW5w1pYxXiXXyMSU0vO5xPjORFtvT-s4pdhRLGDXLZWSVkcFTu9UYJeRr7xc1icEeuiMPusnYGZVqj1Vcfut4ZE3aQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://inventarioveh.000webhostapp.com/Apis/user",
+					"protocol": "https",
+					"host": [
+						"inventarioveh",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"Apis",
+						"user"
+					]
+				},
+				"description": "Get user access (Autorization)\r\n\r\n\r\nExpected:\r\n{\r\n    \"id\": 64,\r\n    \"first_name\": \r\n    \"last_name\": \r\n    \"email\": \r\n    \"created_at\": \r\n    \"updated_at\": \r\n    \"phone\": \r\n    \"user_status\": \r\n}"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	}
+}
